@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div,ul,li{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            border: 1px solid blue;
+            width: 80px;
+        }
+        li{
+            list-style: none;
+        }
+        ul{
+            position: relative;
+        }
+        .zi{
+            font-size: 2px;
+            position: absolute;
+            bottom: 4px;
+            left: 2px;
+            z-index: 999;
+        }
+        .tu{
+            width: 60px;
+            height: 10px;
+            position: absolute;
+            bottom: 7px;
+            left: 0px;
+            background-color: #0093E9;
+            z-index: 0;
+            opacity: 0.5;
+        }
+        .zz{
+            width: 60px;
+            height: 60px;
+            background-color: #eaea76;
+            opacity: 0;
+            position: absolute;
+            bottom: 4px;
+        }
+        .zz:hover{
+            width: 60px;
+            height: 60px;
+            background-color: #eaea76;
+            opacity: 0.5;
+            position: absolute;
+            top: 50px;
+
+        }
+        p{
+            position: absolute;
+            top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <ul>
+        <li class="tx"><img src="头像.webp" alt=""></li>
+        <li class="zi">hahahaha</li>
+        <li class="tu"></li>
+        <li class="zz">
+            <p>hhhh</p>
+        </li>
+
+    </ul>
+</div>
+
+
+</body>
+</html>

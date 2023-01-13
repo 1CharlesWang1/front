@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*含id的标签*/
+        /*p[id]{*/
+        /*    background: #eaea76;*/
+        /*}*/
+
+        /*id=2的标签*/
+        /*p[id="2"]{*/
+        /*    background: #eaea76;*/
+        /*}*/
+
+        /*class中含act的标签*/
+        /*p[class *= "act"]{*/
+        /*    background: #eaea76;*/
+        /*}*/
+
+        /*class中act开头的标签*/
+        p[class ^= "act"]{
+            background: red;
+        }
+
+        /*class中html结尾的标签*/
+        a[href $= "html"]{
+            background: blue;
+        }
+
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <p id="0">p0</p>
+    <p class="active">p1</p>
+    <p id="2">p2</p>
+    <p>p3</p>
+    <ul>
+        <li>
+            <p class="activity">p4</p>
+        </li>
+        <li>
+            <a href="1234556.html">p5</a>
+        </li>
+        <li>
+            <p>p6</p>
+        </li>
+    </ul>
+
+</body>
+</html>

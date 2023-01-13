@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.father,.p1,.p2,.p3,.p4,.p5 {*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*}*/
+        .father{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            padding: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        a{
+             text-align: center;
+             font-size: 10px;
+             height: 100px;
+             width: 100px;
+             line-height:100px;
+            background-color: #0093E9;
+            display: block;
+         }
+
+        a:hover{
+            background-color: #eaea76;
+        }
+        .p2,.p4{
+            position: relative;
+            left: 200px;
+            top: -100px;
+        }
+        .p3{
+            position: relative;
+        }
+        .p4{
+            position: relative;
+            left: 200px;
+        }
+        .p5{
+            position: relative;
+            top: -300px;
+            left: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="father">
+     <a href="" class="p1">链接1</a>
+     <a href="" class="p2">链接2</a>
+     <a href="" class="p3">链接3</a>
+     <a href="" class="p4">链接4</a>
+     <a href="" class="p5">链接5</a>
+</div>
+
+
+</body>
+</html>

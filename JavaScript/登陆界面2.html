@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            /*background: skyblue;*/
+
+            width:100%;
+            margin: 0 auto;
+            height:100%;
+            min-height:300px;
+            background:-webkit-linear-gradient(right,#9fcdf6,#497ed0) ;
+        }
+
+        .bgDiv {
+            width: 422px;
+            height: 339px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .login {
+            width: 422px;
+            height: 339px;
+            background: #fff;
+            position: relative;
+        }
+
+        .logoImg {
+            width: 111px;
+            height: 76px;
+            position: absolute;
+            left: 40px;
+            top: 20px;
+        }
+        p2{
+            font-size: 50px;
+            color: #284b9a;
+            position: absolute;
+            top: 30px;
+            left: 170px;
+            font-family: 仿宋;
+            font-weight: bolder;
+        }
+
+        .username,
+        .pwd{
+            width: 366px;
+            height: 60px;
+            border-bottom: 1px solid #efefef;
+            position: relative;
+            top: 120px;
+            left: 30px;
+
+        }
+
+        .userImg,
+        .pwdImg {
+            width: 30px;
+            height: 30px;
+            float: left;
+            position: absolute;
+            top: 24px;
+        }
+
+        .userInp,
+        .pwdInp {
+            width: 320px;
+            height: 25px;
+            margin-top: 18px;
+            border: none;
+            outline: none;
+            position: absolute;
+            top: 10px;
+            left: 45px;
+        }
+
+        a {
+            width: 190px;
+            height: 15px;
+            background: #4892ff;
+            border: 1px solid #326dcc;
+            color: #fff;
+            font-size: 16px;
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+            padding: 8px 15px 15px 15px;
+        }
+
+        a:active {
+            width: 190px;
+            height: 15px;
+            background: #003d9a;
+            border: 1px solid #326dcc;
+            color: #fff;
+            font-size: 16px;
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+            padding: 8px 15px 15px 15px;
+        }
+
+        #regform1{
+            width: 200px;
+            height: 50px;
+            background-color: #4892ff;
+            border: 1px solid #326dcc;
+            color: #fff;
+            font-size: 16px;
+            position: absolute;
+            left: 30%;
+            top: 80%;
+        }
+        #regform1:active{
+            width: 200px;
+            height: 50px;
+            background-color: #003d9a;
+            border: 1px solid #326dcc;
+            color: #fff;
+            font-size: 16px;
+            position: absolute;
+            left: 30%;
+            top: 80%;
+        }
+
+        span{
+            display: none;
+            color: red;
+        }
+
+        /*a{*/
+        /*    color: #fff;*/
+        /*    position: absolute;*/
+        /*    left: 50%;*/
+        /*    top: 50%;*/
+        /*    transform: translateX(-50%) translateY(-50%);*/
+        /*}*/
+    </style>
+</head>
+</head>
+<body >
+
+    <div class="bj">
+        <form action="#" method="get" id="regform">
+        <div class="bgDiv">
+            <div class="login">
+                <img class="logoImg" src="./css/hh.png"/>
+                <p2>黄河表面</p2>
+                <div class="username">
+                    <img class="userImg" src="./css/yh.png"/>
+                    <input class="userInp" id="user_name" name="username" type="text" placeholder="请输入用户名"/>
+                    <span id="er1" >error</span>
+                </div>
+                <div class="pwd">
+                    <img class="pwdImg" src="./css/ma.png"/>
+                    <input class="pwdInp" type="password" id="password" name="password" placeholder="请输入密码"/>
+                    <span id="er2">error</span>
+                </div>
+                <input type="submit" value="登录" id="regform1">
+<!--                <a href="" >登&nbsp;录</a>-->
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+    <script>
+        var usernameinput=document.getElementById("user_name");
+        usernameinput.onblur=checkUsername;
+        function checkUsername() {
+            var username = usernameinput.value.trim();
+
+            var flag=username.length>=6
+            if(flag){
+                document.getElementById("er1").style.display='none';
+            }
+            else{
+                document.getElementById("er1").style.display='block';
+            }
+            return flag;
+        }
+        var passwordinput=document.getElementById("password");
+        passwordinput.onblur=checkPassword;
+        function checkPassword() {
+            var password = passwordinput.value.trim();
+
+            var flag=password.length>=6
+            if(flag){
+                document.getElementById("er2").style.display='none';
+            }
+            else{
+                document.getElementById("er2").style.display='block';
+            }
+            return flag;
+        }
+
+        var regform=document.getElementById("regform");
+        regform.onsubmit=function (){
+            var flag = checkUsername() && checkPassword();
+            return flag;
+        }
+    </script>
+
+</body>
+
+</html>

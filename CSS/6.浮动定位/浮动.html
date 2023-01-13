@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father{
+            /*overflow: hidden;*/
+            border: 2px solid black;
+        }
+        .l1{
+            display: inline-block;
+        }
+        .l2{
+            display: inline;
+        }
+        .l3{
+            display: inline-block;
+        }
+        .l4{
+            float:left;
+            display: inline-block;
+        }
+        .l5{
+            float: right;
+        }
+        .l6{
+            float: left;
+            clear: both;    /*clear both 两侧不允许浮动*/
+        }
+
+        /*伪类*/
+        .father:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /*.clear{*/
+        /*    clear: both;*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+<div class="father">
+    <div class="l1">欢迎光临</div>
+    <div class="l2">hhhh</div>
+    <div class="l3"><img src="头像.webp" alt=""></div>
+
+    <hr>
+
+    <div class="l4">欢迎光临</div>
+    <div class="l5">hhhh</div>
+    <div class="l6"><img src="头像.webp" alt=""></div>
+
+    <!--  清除边框塌陷问题
+    <div class="clear"></div>-->
+</div>
+</body>
+</html>

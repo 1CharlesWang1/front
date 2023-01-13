@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father{
+            border: 2px solid black;
+            padding: 10px;
+            width: 300px;
+            height: 2000px;
+        }
+    .p1,.p2,.p3{
+        background-color: #eaea76;
+        border: 1px solid black;
+        margin: 10px;
+    }
+    .p1{
+        position: sticky;
+        top: 0;
+    }
+    .p2{
+        /*position: relative;*/
+        /*bottom: 25px;*/
+        position: absolute;
+        bottom: 25px;
+    }
+    .p3{
+        /*固定定位*/
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+    }
+    </style>
+
+
+</head>
+
+<body>
+<!--relitive-->
+
+<!--absolute
+1.无父级：相较于页面边框
+2.父级为relative: 相较于父级边框
+-->
+
+<div class="father">
+    <div class="p1">链接1</div>
+    <div class="p2">链接2</div>
+    <div class="p3">链接3</div>
+</div>
+
+</body>
+</html>
+

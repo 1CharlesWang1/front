@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="click" id="b1">
+
+<form action="#" id="register">
+    <input type="username">
+    <input type="submit">
+</form>
+
+<script>
+    document.getElementById("b1").onclick = function ()
+    {
+        alert("aaa")
+    }
+
+    document.getElementById("register").onsubmit = function (){
+        return false
+    }
+</script>
+
+
+</body>
+</html>
